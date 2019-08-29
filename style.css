@@ -3,7 +3,7 @@ body {
     font-size: 25px;
 }
 
-img {
+.gif-display img {
     max-width: 300px;
 }
 
@@ -11,11 +11,15 @@ img {
     display: inline-block;
 }
 
+.heading img {
+    width: 200px;
+}
+
 @media screen and (max-width: 767px) {
     #gif-display {
         text-align: center;
     }
-    img {
+    .gif-display img {
         width: 100%;
     }
 }
