@@ -16,7 +16,7 @@ $(document).ready(function() {
     function displayGifs() {
         $(".gif-btn").on('click', function() {
             var topic = $(this).attr("data-topic");
-            var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topic + "+fails&api_key=GfT1wbBJMOtOLITH09TXDsK2DfYPE7CD&limit=3";
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "+fails&api_key=GfT1wbBJMOtOLITH09TXDsK2DfYPE7CD&limit=3";
     
             $.ajax({
                 url: queryURL,
