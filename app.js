@@ -16,7 +16,7 @@ $(document).ready(function() {
     function displayGifs() {
         $(".gif-btn").on('click', function() {
             var topic = $(this).attr("data-topic");
-            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "+fails&api_key=GfT1wbBJMOtOLITH09TXDsK2DfYPE7CD&limit=3";
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "+fails&api_key=GfT1wbBJMOtOLITH09TXDsK2DfYPE7CD&limit=4";
     
             $.ajax({
                 url: queryURL,
@@ -26,7 +26,7 @@ $(document).ready(function() {
                 console.log(response.data);
     
                 for (var i = 0; i < results.length; i++) {
-                    var gifDiv = $("<div class='col-lg-6 m-0'>");
+                    var gifDiv = $("<div class='col-lg-6 m-0 gif-div'>");
                     var rating = results[i].rating;
                     var p = $("<p>").html("Rating: " + rating);
                     var image = $("<img>");
