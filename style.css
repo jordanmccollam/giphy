@@ -11,14 +11,10 @@ body {
     display: inline-block;
 }
 
-.heading img {
-    /* width: 700px; */
-    height: 300px;
-}
-
 .jumbotron {
     background: url(failbanner.jpg);
     background-size: 100px;
+    height: 200px;
 }
 
 @media screen and (max-width: 767px) {
