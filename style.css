@@ -12,7 +12,13 @@ body {
 }
 
 .heading img {
-    width: 200px;
+    /* width: 700px; */
+    height: 300px;
+}
+
+.jumbotron {
+    background: url(failbanner.jpg);
+    background-size: 100px;
 }
 
 @media screen and (max-width: 767px) {
