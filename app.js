@@ -30,12 +30,31 @@ $(document).ready(function() {
                     var rating = results[i].rating;
                     var p = $("<p>").html("Rating: " + rating);
                     var image = $("<img>");
-                    image.attr("src", results[i].images.fixed_height.url);
+                    image.attr("src", results[i].images.fixed_height_still.url);
+                    image.attr("data-still", results[i].images.fixed_height_still.url);
+                    image.attr("data-animate", results[i].images.fixed_height.url);
+                    image.attr("data-state", "still");
+                    image.addClass("gif");
                     gifDiv.prepend(p);
                     gifDiv.append(image);
                     $("#gif-display").prepend(gifDiv);
                 }
+                gifAnimate();
             });
+        })
+    };
+
+    function gifAnimate() {
+        $(".gif").on('click', function() {
+            var state = $(this).attr("data-state");
+
+            if (state === "still") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
         })
     };
 
