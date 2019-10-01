@@ -1,2 +1,2 @@
-# giphy
+# Gif
 giphy and AJAX homework assignment 
